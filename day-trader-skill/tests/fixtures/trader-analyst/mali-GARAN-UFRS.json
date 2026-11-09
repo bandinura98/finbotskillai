@@ -1,0 +1,269 @@
+{
+"ok": true,
+"errorCode": null,
+"errorDescription": null,
+"transactionId": "6f41135ab54c4308bd74ef16b21420ac",
+"value": [
+{
+"itemCode": "1A",
+"itemDescTr": "I. NAKİT DEĞERLER VE MERKEZ BANKASI",
+"itemDescEng": "I. CASH AND BALANCES WITH THE CENTRAL BANK OF TURKEY",
+"value1": "0",
+"value2": "529760307000",
+"value3": "547811877000",
+"value4": "359995256000"
+},
+{
+"itemCode": "2OV",
+"itemDescTr": "16.4.2 Dönem Net Kar/Zararı",
+"itemDescEng": "16.4.2 Current Year Profit/Loss",
+"value1": "0",
+"value2": "53610145000",
+"value3": "25284346000",
+"value4": "92174994000"
+},
+{
+"itemCode": "3A",
+"itemDescTr": "I. FAİZ GELİRLERİ",
+"itemDescEng": "I. INTEREST INCOME",
+"value1": "518777000000",
+"value2": "328767000000",
+"value3": "160638310000",
+"value4": "500033820000"
+},
+{
+"itemCode": "3AA",
+"itemDescTr": "1.1 Kredilerden Alınan Faizler",
+"itemDescEng": "1.1 Interest on Loans",
+"value1": "379200000000",
+"value2": "242693000000",
+"value3": "115817363000",
+"value4": "368731685000"
+},
+{
+"itemCode": "3B",
+"itemDescTr": "II. FAİZ GİDERLERİ",
+"itemDescEng": "II. INTEREST EXPENSE",
+"value1": "410178000000",
+"value2": "265580000000",
+"value3": "130210960000",
+"value4": "399684573000"
+},
+{
+"itemCode": "3C",
+"itemDescTr": "III. NET FAİZ GELİRİ/GİDERİ (I - II)",
+"itemDescEng": "III. NET INTEREST INCOME/EXPENSES (I - II)",
+"value1": "108599000000",
+"value2": "63187000000",
+"value3": "30427350000",
+"value4": "100349247000"
+},
+{
+"itemCode": "3CA",
+"itemDescTr": "IV. NET ÜCRET VE KOMİSYON GELİRLERİ/GİDERLERİ",
+"itemDescEng": "IV. NET FEES AND COMMISSIONS INCOME/EXPENSES",
+"value1": "102202000000",
+"value2": "64190000000",
+"value3": "29708642000",
+"value4": "94124495000"
+},
+{
+"itemCode": "3CB",
+"itemDescTr": "V. TEMETTÜ GELİRLERİ",
+"itemDescEng": "V. DIVIDEND INCOME",
+"value1": "252000000",
+"value2": "245000000",
+"value3": "6263000",
+"value4": "124750000"
+},
+{
+"itemCode": "3CC",
+"itemDescTr": "VI. TİCARİ KAR / ZARAR (Net)",
+"itemDescEng": "VI. NET TRADING INCOME",
+"value1": "1937000000",
+"value2": "6315000000",
+"value3": "5100193000",
+"value4": "6704520000"
+},
+{
+"itemCode": "3CD",
+"itemDescTr": "VII. DİĞER FAALİYET GELİRLERİ",
+"itemDescEng": "VII. OTHER OPERATING INCOME",
+"value1": "34966000000",
+"value2": "26014000000",
+"value3": "14614732000",
+"value4": "43759059000"
+},
+{
+"itemCode": "3CE",
+"itemDescTr": "VIII. FAALİYET GELİRLERİ/GİDERLERİ TOPLAMI (III+IV+V+VI+VII)",
+"itemDescEng": "VIII. TOTAL OPERATING INCOME/EXPENSES (III+IV+V+VI+VII)",
+"value1": "247956000000",
+"value2": "159951000000",
+"value3": "79857180000",
+"value4": "245062071000"
+},
+{
+"itemCode": "3CF",
+"itemDescTr": "IX. KREDİ VE DİĞER ALACAKLAR DEĞER DÜŞÜŞ KARŞILIĞI (-)",
+"itemDescEng": "IX. PROVISIONS FOR LOAN LOSSES OR OTHER RECEIVABLES",
+"value1": "56505000000",
+"value2": "39887000000",
+"value3": "22637145000",
+"value4": "54261585000"
+},
+{
+"itemCode": "3CG",
+"itemDescTr": "X. DİĞER FAALİYET GİDERLERİ (-)",
+"itemDescEng": "X. OTHER OPERATING EXPENSES (-)",
+"value1": "69221000000",
+"value2": "41538000000",
+"value3": "18807785000",
+"value4": "57613021000"
+},
+{
+"itemCode": "3CH",
+"itemDescTr": "XI. NET FAALİYET KARI/ZARARI (VIII-IX-X)",
+"itemDescEng": "XI. NET OPERATING INCOME (IX-X-XI)",
+"value1": "84486000000",
+"value2": "54255000000",
+"value3": "26482472000",
+"value4": "97978674000"
+},
+{
+"itemCode": "3CI",
+"itemDescTr": "XII. BİRLEŞME İŞLEMİ SONRASINDA GELİR OLARAK KAYDEDİLEN FAZLALIK TUTARI",
+"itemDescEng": "XII. SURPLUS WRITTEN AS GAIN AFTER MERGER",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3CJ",
+"itemDescTr": "XIII. ÖZKAYNAK YÖNTEMİ UYGULANAN ORTAKLIKLARDAN KAR/ZARAR",
+"itemDescEng": "XIII. PROFIT/LOSSES FROM ASSOCIATES AND SUBSIDIARIES",
+"value1": "20425000000",
+"value2": "12902000000",
+"value3": "5760523000",
+"value4": "18823381000"
+},
+{
+"itemCode": "3CK",
+"itemDescTr": "XIV. NET PARASAL POZİSYON KARI/ZARARI",
+"itemDescEng": "XIV. NET MONETORY POSITION GAIN/LOSS",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3CL",
+"itemDescTr": "XV. SÜRDÜRÜLEN FAALİYETLER VERGİ ÖNCESİ K/Z (XI+XII+XIII+XIV)",
+"itemDescEng": "XV. PROFIT/LOSS BEFORE TAXES FROM CONTINUING OPERATIONS (XI+XII+XIII+XIV)",
+"value1": "104911000000",
+"value2": "67157000000",
+"value3": "32242995000",
+"value4": "116802055000"
+},
+{
+"itemCode": "3CM",
+"itemDescTr": "XVI. SÜRDÜRÜLEN FAALİYETLER VERGİ KARŞILIĞI (±)",
+"itemDescEng": "XVI. PROVISION FOR TAXES ON INCOME FROM CONTINUING OPERATIONS (±)",
+"value1": "20869000000",
+"value2": "13547000000",
+"value3": "6958649000",
+"value4": "24627061000"
+},
+{
+"itemCode": "3CN",
+"itemDescTr": "XVII. SÜRDÜRÜLEN FAALİYETLER DÖNEM NET K/Z (XV±XVI)",
+"itemDescEng": "XVII. NET PROFIT/LOSS FROM CONTINUING OPERATIONS (XV±XVI)",
+"value1": "84042000000",
+"value2": "53610000000",
+"value3": "25284346000",
+"value4": "92174994000"
+},
+{
+"itemCode": "3CO",
+"itemDescTr": "XVIII. DURDURULAN FAALİYETLERDEN GELİRLER",
+"itemDescEng": "XVIII. INCOME FROM TERMINATED OPERATIONS",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3CP",
+"itemDescTr": "XIX. DURDURULAN FAALİYETLERDEN GİDERLER (-)",
+"itemDescEng": "XIX. EXPENSES FROM TERMINATED OPERATIONS (-)",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3CR",
+"itemDescTr": "XX. DURDURULAN FAALİYETLER VERGİ ÖNCESİ K/Z (XVIII-XIX)",
+"itemDescEng": "XX. PROFIT/LOSS BEFORE TAXES FROM TERMINATED OPERATIONS (XVIII-XIX)",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3CS",
+"itemDescTr": "XXI. DURDURULAN FAALİYETLER VERGİ KARŞILIĞI (±)",
+"itemDescEng": "XXI. PROVISION FOR TAXES ON INCOME FROM TERMINATED OPERATIONS (±)",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3CT",
+"itemDescTr": "XXII. DURDURULAN FAALİYETLER DÖNEM NET K/Z (XX±XXI)",
+"itemDescEng": "XXII. NET PROFIT/LOSS FROM TERMINATED OPERATIONS (XX±XXI)",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3Z",
+"itemDescTr": "XXIII. NET DÖNEM KARI/ZARARI (XVII+XXII)",
+"itemDescEng": "XXIII. NET PROFIT/LOSSES (XVII+XXII)",
+"value1": "84042000000",
+"value2": "53610000000",
+"value3": "25284346000",
+"value4": "92174994000"
+},
+{
+"itemCode": "3ZA",
+"itemDescTr": "23.1 Grubun Karı/Zararı",
+"itemDescEng": "23.1. Group's Profit/Losses",
+"value1": "84042000000",
+"value2": "53610000000",
+"value3": "25284346000",
+"value4": "92174994000"
+},
+{
+"itemCode": "3ZB",
+"itemDescTr": "23.2 Azınlık Hakları Karı/Zararı (-)",
+"itemDescEng": "23.2. Minority Shares' Profits/Losses",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3ZC",
+"itemDescTr": "Hisse Başına Kar/Zarar",
+"itemDescEng": "Earnings/Losses Per Share",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+}
+]
+}

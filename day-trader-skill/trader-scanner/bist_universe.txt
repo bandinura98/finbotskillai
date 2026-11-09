@@ -1,0 +1,116 @@
+# BIST share list for trader-scanner: one CODE|Company name a line.
+# This is the BIST 100 (plus a few other liquid Yıldız Pazar shares) as best known
+# when it was written (2026-11). Borsa İstanbul rebalances its indices every
+# quarter and companies change codes: check it against Borsa İstanbul's official
+# BIST 100 index constituent list (borsaistanbul.com, Endeksler) and edit freely.
+# Lines starting with # and blank lines are ignored. Codes are bare BIST codes
+# (THYAO, not THYAO.IS); the scanner adds .IS for Yahoo. A code Yahoo does not
+# know simply fails at scan time with "no data from Yahoo".
+# `scan.py universe` copies this file to trader/universe.txt.
+AEFES|Anadolu Efes Biracılık ve Malt Sanayii
+AGHOL|AG Anadolu Grubu Holding
+AKBNK|Akbank
+AKCNS|Akçansa Çimento
+AKFYE|Akfen Yenilenebilir Enerji
+AKSA|Aksa Akrilik Kimya Sanayii
+AKSEN|Aksa Enerji Üretim
+ALARK|Alarko Holding
+ALBRK|Albaraka Türk Katılım Bankası
+ALFAS|Alfa Solar Enerji
+ALTNY|Altınay Savunma Teknolojileri
+ANSGR|Anadolu Anonim Türk Sigorta
+ARCLK|Arçelik
+ASELS|Aselsan Elektronik Sanayi ve Ticaret
+ASTOR|Astor Enerji
+AYGAZ|Aygaz
+BERA|Bera Holding
+BIMAS|BİM Birleşik Mağazalar
+BRSAN|Borusan Birleşik Boru Fabrikaları
+BRYAT|Borusan Yatırım ve Pazarlama
+BSOKE|Batısöke Söke Çimento
+BTCIM|Batıçim Batı Anadolu Çimento
+BUCIM|Bursa Çimento Fabrikası
+CANTE|Çan2 Termik
+CCOLA|Coca-Cola İçecek
+CIMSA|Çimsa Çimento
+CLEBI|Çelebi Hava Servisi
+CWENE|CW Enerji Mühendislik
+DEVA|Deva Holding
+DOAS|Doğuş Otomotiv Servis ve Ticaret
+DOHOL|Doğan Şirketler Grubu Holding
+ECILC|EİS Eczacıbaşı İlaç Sınai ve Finansal Yatırımlar
+EGEEN|Ege Endüstri ve Ticaret
+EKGYO|Emlak Konut Gayrimenkul Yatırım Ortaklığı
+ENERY|Enerya Enerji
+ENJSA|Enerjisa Enerji
+ENKAI|Enka İnşaat ve Sanayi
+EREGL|Ereğli Demir ve Çelik Fabrikaları
+EUPWR|Europower Enerji ve Otomasyon Teknolojileri
+EUREN|Europen Endüstri İnşaat
+FROTO|Ford Otomotiv Sanayi
+GARAN|Türkiye Garanti Bankası
+GESAN|Girişim Elektrik Sanayi Taahhüt
+GLYHO|Global Yatırım Holding
+GRSEL|Gür-Sel Turizm Taşımacılık
+GUBRF|Gübre Fabrikaları
+GWIND|Galata Wind Enerji
+HALKB|Türkiye Halk Bankası
+HEKTS|Hektaş Ticaret
+ISCTR|Türkiye İş Bankası (C)
+ISDMR|İskenderun Demir ve Çelik
+ISGYO|İş Gayrimenkul Yatırım Ortaklığı
+ISMEN|İş Yatırım Menkul Değerler
+KARSN|Karsan Otomotiv Sanayii
+KCAER|Kocaer Çelik Sanayi
+KCHOL|Koç Holding
+KLSER|Kaleseramik Çanakkale Kalebodur
+KONTR|Kontrolmatik Teknoloji Enerji ve Mühendislik
+KONYA|Konya Çimento Sanayii
+KRDMD|Kardemir Karabük Demir Çelik (D)
+KTLEV|Katılımevim Tasarruf Finansman
+LMKDC|Limak Doğu Anadolu Çimento
+MAVI|Mavi Giyim Sanayi ve Ticaret
+MGROS|Migros Ticaret
+MIATK|Mia Teknoloji
+MPARK|MLP Sağlık Hizmetleri
+NTHOL|Net Holding
+OBAMS|Oba Makarnacılık
+ODAS|Odaş Elektrik Üretim
+OTKAR|Otokar Otomotiv ve Savunma Sanayi
+OYAKC|Oyak Çimento Fabrikaları
+PASEU|Pasifik Eurasia Lojistik
+PETKM|Petkim Petrokimya Holding
+PGSUS|Pegasus Hava Taşımacılığı
+PRKME|Park Elektrik Üretim Madencilik
+QUAGR|QUA Granite Hayal Yapı ve Ürünleri
+REEDR|Reeder Teknoloji
+SAHOL|Hacı Ömer Sabancı Holding
+SASA|SASA Polyester Sanayi
+SDTTR|SDT Uzay ve Savunma Teknolojileri
+SELEC|Selçuk Ecza Deposu
+SISE|Türkiye Şişe ve Cam Fabrikaları
+SKBNK|Şekerbank
+SMRTG|Smart Güneş Enerjisi Teknolojileri
+SOKM|Şok Marketler Ticaret
+TABGD|TAB Gıda Sanayi ve Ticaret
+TAVHL|TAV Havalimanları Holding
+TCELL|Turkcell İletişim Hizmetleri
+THYAO|Türk Hava Yolları
+TKFEN|Tekfen Holding
+TMSN|Tümosan Motor ve Traktör Sanayi
+TOASO|Tofaş Türk Otomobil Fabrikası
+TRGYO|Torunlar Gayrimenkul Yatırım Ortaklığı
+TSKB|Türkiye Sınai Kalkınma Bankası
+TTKOM|Türk Telekomünikasyon
+TTRAK|Türk Traktör ve Ziraat Makineleri
+TUKAS|Tukaş Gıda Sanayi ve Ticaret
+TUPRS|Tüpraş Türkiye Petrol Rafinerileri
+TURSG|Türkiye Sigorta
+ULKER|Ülker Bisküvi Sanayi
+VAKBN|Türkiye Vakıflar Bankası
+VAKKO|Vakko Tekstil ve Hazır Giyim
+VESBE|Vestel Beyaz Eşya Sanayi ve Ticaret
+VESTL|Vestel Elektronik Sanayi ve Ticaret
+YEOTK|YEO Teknoloji Enerji ve Endüstri
+YKBNK|Yapı ve Kredi Bankası
+ZOREN|Zorlu Enerji Elektrik Üretim

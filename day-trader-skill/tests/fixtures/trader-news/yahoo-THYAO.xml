@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0">
+    <channel>
+        <copyright>Copyright (c) 2026 Yahoo Inc. All rights reserved.</copyright>
+        <description>Latest Financial News for THYAO.IS</description>
+        <image>
+            <height>45</height>
+            <link>http://finance.yahoo.com/q/h?s=THYAO.IS</link>
+            <title>Yahoo! Finance: THYAO.IS News</title>
+            <url>https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png</url>
+            <width>144</width>
+        </image>
+        <item>
+            <description>AerCap Holdings N.V. ("AerCap" or the "Company") (NYSE: AER) today announced that it has signed lease agreements with Turkish Airlines for two Boeing 777-300ERSF converted aircraft with deliveries scheduled between March and September 2027.</description>
+            <guid isPermaLink="false">69fd53fe-1ccd-3102-a6d5-e451ad5ed1f6</guid>
+            <link>https://finance.yahoo.com/markets/stocks/articles/aercap-signs-lease-agreements-turkish-110000934.html?.tsrc=rss</link>
+            <pubDate>Thu, 29 Oct 2026 11:00:00 +0000</pubDate>
+            <title>AerCap Signs Lease Agreements with Turkish Airlines for Two Boeing 777-300ERSF Converted Aircraft</title>
+        </item>
+        <item>
+            <description>Turkish Airlines Bets Big on Boeing With Up to 150 737 Max Jets</description>
+            <guid isPermaLink="false">fabec9ad-144a-339f-aa49-a9af01f62ed0</guid>
+            <link>https://finance.yahoo.com/markets/stocks/articles/boeing-lands-massive-150-plane-143439176.html?.tsrc=rss</link>
+            <pubDate>Thu, 24 Sep 2026 14:34:39 +0000</pubDate>
+            <title>Boeing Lands Massive 150-Plane Deal With Turkish Airlines</title>
+        </item>
+        <item>
+            <description>GE Aerospace has secured a large CFM International deal to supply and service more than 300 LEAP-1B engines for Turkish Airlines' Boeing 737 MAX fleet, and is also expanding castings capacity through the planned acquisition of Consolidated Precision Products. The Turkish Airlines engine and long term services agreement increases GE Aerospace's recurring maintenance revenue base and supports potential future MRO activity through a new engine facility in Türkiye. Next, the focus turns to how...</description>
+            <guid isPermaLink="false">4fcf939d-f72f-350d-b052-8aebcf151760</guid>
+            <link>https://finance.yahoo.com/markets/stocks/articles/ge-aerospaces-earnings-outlook-means-211828608.html?.tsrc=rss</link>
+            <pubDate>Fri, 16 Oct 2026 21:18:28 +0000</pubDate>
+            <title>What GE Aerospace's Earnings Outlook Means For Shareholders</title>
+        </item>
+        <item>
+            <description>GE Aerospace's Commercial Engines &amp; Services segment gains momentum on robust engine orders, rising deliveries and services growth. Can the strength continue?</description>
+            <guid isPermaLink="false">0e42622b-5988-38b5-b36e-11d47e786711</guid>
+            <link>https://finance.yahoo.com/markets/stocks/articles/ges-commercial-engines-segment-gains-154400377.html?.tsrc=rss</link>
+            <pubDate>Tue, 03 Nov 2026 15:44:00 +0000</pubDate>
+            <title>GE's Commercial Engines Segment Gains Momentum: Can It Sustain?</title>
+        </item>
+        <language>en-US</language>
+        <lastBuildDate>Mon, 09 Nov 2026 05:37:32 +0000</lastBuildDate>
+        <link>http://finance.yahoo.com/q/h?s=THYAO.IS</link>
+        <title>Yahoo! Finance: THYAO.IS News</title>
+    </channel>
+</rss>

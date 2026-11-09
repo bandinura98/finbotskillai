@@ -1,0 +1,52 @@
+{
+  "created_by": "trader-exit",
+  "symbol": "THYAO",
+  "side": "buy",
+  "date": "2026-11-09",
+  "setup": "orb",
+  "entry": 312.5,
+  "entry_time": "10:30 AM",
+  "entry_bar": 6,
+  "interval": "5m",
+  "opening_range": {
+    "high": 311.0,
+    "low": 305.0,
+    "minutes": 15
+  },
+  "stop": 308.0,
+  "stop_rule": "or_mid",
+  "stop_label": "opening-range midpoint",
+  "target": 317.0,
+  "target_r": 1.0,
+  "target_label": "1R (one times the risk)",
+  "risk_per_share": 4.5,
+  "reward_risk": 1.0,
+  "flat_by": "17:50",
+  "stop_detail": "(311.00 + 305.00) / 2 = 308",
+  "created_at": "2026-11-09T07:31:00Z",
+  "note": "A stop is a plan, not a guarantee: a gap or a fast market can fill past it.",
+  "tick_stop": 0.25,
+  "tick_target": 0.25,
+  "limits": {
+    "base": 305.0,
+    "taban": 274.5,
+    "tavan": 335.5,
+    "source": "--base-price"
+  },
+  "costs": {
+    "commission_rate": 0.0015,
+    "bsmv_rate": 0.05,
+    "exchange_fee_rate": 3e-05,
+    "entry_per_share": 0.5016,
+    "exit_per_share_at_stop": 0.4943,
+    "exit_per_share_at_target": 0.5088,
+    "round_trip_at_stop": 0.9959,
+    "round_trip_at_target": 1.0103
+  },
+  "cost_per_share": 0.9959,
+  "cost_per_share_at_target": 1.0103,
+  "risk_per_share_net": 5.4959,
+  "reward_per_share_net": 3.4897,
+  "reward_risk_net": 0.63,
+  "warnings": []
+}

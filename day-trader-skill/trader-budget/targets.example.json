@@ -1,0 +1,11 @@
+{
+  "source": "Örnek ağırlıklar (BIST 30'dan beş hisse, elle yazıldı). Yatırım tavsiyesi değildir.",
+  "as_of": "2026-11-09",
+  "weights": [
+    {"ticker": "THYAO", "name": "Türk Hava Yolları", "weight": 30},
+    {"ticker": "ASELS", "name": "Aselsan", "weight": 25},
+    {"ticker": "GARAN", "name": "Garanti BBVA", "weight": 20},
+    {"ticker": "BIMAS", "name": "BİM Mağazalar", "weight": 15},
+    {"ticker": "KCHOL", "name": "Koç Holding", "weight": 10}
+  ]
+}

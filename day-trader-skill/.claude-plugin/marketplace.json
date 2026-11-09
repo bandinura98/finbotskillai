@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "day-trader-skill",
+  "description": "The Day Trader skill pack for Claude, adapted to Borsa İstanbul (BIST)",
+  "owner": {
+    "name": "Jake Schincariol",
+    "url": "https://opusjake.ai"
+  },
+  "plugins": [
+    {
+      "name": "day-trader-skill",
+      "description": "Ten Claude skills for day trading on Borsa İstanbul: a chart scanner, a news monitor, an entry timer, an exit planner with BIST ticks and taban/tavan, a time machine that replays 10,000 sessions, a risk manager, a budget manager with commission and BSMV, an order-slip broker (never places an order, never without your yes), price alerts and an earnings analyst.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/Jakeschincariol/day-trader-skill"
+    }
+  ]
+}

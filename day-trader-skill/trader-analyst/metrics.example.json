@@ -1,0 +1,25 @@
+{
+  "as_of": "2026-11-09",
+  "currency": "TRY",
+  "companies": [
+    {
+      "ticker": "THYAO",
+      "name": "Türk Hava Yolları",
+      "financial_group": "XI_29",
+      "currency": "TRY",
+      "period_end": "2026-09-30",
+      "quarter": "Q3 2026",
+      "revenue_ttm": 1478021196737.0,
+      "net_income_ttm": 146218895515.0,
+      "eps_ttm": null,
+      "net_income_basis": "parent",
+      "revenue_growth_yoy": 40.0,
+      "eps_growth_yoy": null,
+      "net_income_growth_yoy": 9.7,
+      "gross_margin": 17.1,
+      "operating_margin": 11.1,
+      "net_margin": 15.5,
+      "source": "İş Yatırım MaliTablo (unofficial endpoint)"
+    }
+  ]
+}

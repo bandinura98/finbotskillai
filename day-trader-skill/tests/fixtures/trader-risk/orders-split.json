@@ -1,0 +1,52 @@
+{
+  "created_by": "trader-budget",
+  "created_at": "2026-11-09T07:30:00Z",
+  "status": "proposed",
+  "market": "BIST",
+  "currency": "TRY",
+  "paper": true,
+  "note": "Proposals only. Nothing is sent anywhere: trader-risk checks each order, you say evet to it in the chat, and you type the emir fisi into your own broker app yourself.",
+  "source": "Örnek ağırlıklar (BIST 30'dan beş hisse, elle yazıldı). Yatırım tavsiyesi değildir.",
+  "orders": [
+    {
+      "symbol": "THYAO",
+      "side": "buy",
+      "qty": "80",
+      "type": "market",
+      "time_in_force": "day",
+      "why": "30.00% of the split, weights from Örnek ağırlıklar (BIST 30'dan beş hisse, elle yazıldı). Yatırım tavsiyesi değildir.; capped at 25% of the 100.000,00 TL budget"
+    },
+    {
+      "symbol": "ASELS",
+      "side": "buy",
+      "qty": "128",
+      "type": "market",
+      "time_in_force": "day",
+      "why": "25.00% of the split, weights from Örnek ağırlıklar (BIST 30'dan beş hisse, elle yazıldı). Yatırım tavsiyesi değildir."
+    },
+    {
+      "symbol": "GARAN",
+      "side": "buy",
+      "qty": "136",
+      "type": "market",
+      "time_in_force": "day",
+      "why": "20.00% of the split, weights from Örnek ağırlıklar (BIST 30'dan beş hisse, elle yazıldı). Yatırım tavsiyesi değildir."
+    },
+    {
+      "symbol": "BIMAS",
+      "side": "buy",
+      "qty": "26",
+      "type": "market",
+      "time_in_force": "day",
+      "why": "15.00% of the split, weights from Örnek ağırlıklar (BIST 30'dan beş hisse, elle yazıldı). Yatırım tavsiyesi değildir."
+    },
+    {
+      "symbol": "KCHOL",
+      "side": "buy",
+      "qty": "44",
+      "type": "market",
+      "time_in_force": "day",
+      "why": "10.00% of the split, weights from Örnek ağırlıklar (BIST 30'dan beş hisse, elle yazıldı). Yatırım tavsiyesi değildir."
+    }
+  ]
+}

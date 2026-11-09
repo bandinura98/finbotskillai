@@ -1,0 +1,32 @@
+{
+  "created_by": "trader-exit",
+  "symbol": "THYAO",
+  "side": "buy",
+  "date": "2026-11-09",
+  "setup": "orb",
+  "entry": 285.5,
+  "entry_time": "10:30 AM",
+  "entry_bar": 5,
+  "interval": "5m",
+  "opening_range": {
+    "high": 284.5,
+    "low": 279.5,
+    "minutes": 15
+  },
+  "stop": 282.0,
+  "stop_rule": "or_mid",
+  "stop_label": "opening-range midpoint",
+  "target": 289.0,
+  "target_r": 1.0,
+  "target_label": "1R (one times the risk)",
+  "risk_per_share": 3.5,
+  "reward_risk": 1.0,
+  "flat_by": "17:50",
+  "limits": {
+    "base": 280.0,
+    "taban": 252.0,
+    "tavan": 308.0,
+    "source": "chart"
+  },
+  "cost_per_share": 0.9
+}

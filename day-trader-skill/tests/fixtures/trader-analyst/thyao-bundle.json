@@ -1,0 +1,680 @@
+{
+"saved": "2026-11-09",
+"source": "İş Yatırım MaliTablo (unofficial endpoint)",
+"companies": {
+"THYAO": {
+"name": "Türk Hava Yolları",
+"financialGroup": "XI_29",
+"answers": [
+{
+"periods": [
+[
+2026,
+9
+],
+[
+2026,
+6
+],
+[
+2026,
+3
+],
+[
+2025,
+12
+]
+],
+"url": "https://www.isyatirim.com.tr/_layouts/15/IsYatirim.Website/Common/Data.aspx/MaliTablo?companyCode=THYAO&exchange=TRY&financialGroup=XI_29&year1=2026&period1=9&year2=2026&period2=6&year3=2026&period3=3&year4=2025&period4=12",
+"value": [
+{
+"itemCode": "1A",
+"itemDescTr": "Dönen Varlıklar",
+"itemDescEng": "CURRENT ASSETS",
+"value1": "559178000000",
+"value2": "512191000000",
+"value3": "485646000000",
+"value4": "542535251740"
+},
+{
+"itemCode": "2OCF",
+"itemDescTr": "  Dönem Net Kar/Zararı",
+"itemDescEng": "Current Year Income /(Losses)",
+"value1": "80330000000",
+"value2": "18864000000",
+"value3": "9915000000",
+"value4": "146952895515"
+},
+{
+"itemCode": "3C",
+"itemDescTr": "Satış Gelirleri",
+"itemDescEng": "Net Sales",
+"value1": "981030000000",
+"value2": "585069000000",
+"value3": "257961000000",
+"value4": "1187816196737"
+},
+{
+"itemCode": "3CA",
+"itemDescTr": "Satışların Maliyeti (-)",
+"itemDescEng": "Cost Of Sales",
+"value1": "-870649000000",
+"value2": "-542482000000",
+"value3": "-236393000000",
+"value4": "-994428334440"
+},
+{
+"itemCode": "3CAB",
+"itemDescTr": "Ticari Faaliyetlerden Brüt Kar (Zarar)",
+"itemDescEng": "Gross Profit (Loss) from Trade Operations",
+"value1": "110381000000",
+"value2": "42587000000",
+"value3": "21568000000",
+"value4": "193387862297"
+},
+{
+"itemCode": "3D",
+"itemDescTr": "BRÜT KAR (ZARAR)",
+"itemDescEng": "GROSS PROFIT (LOSS)",
+"value1": "110381000000",
+"value2": "42587000000",
+"value3": "21568000000",
+"value4": "193387862297"
+},
+{
+"itemCode": "3DA",
+"itemDescTr": "Pazarlama, Satış ve Dağıtım Giderleri (-)",
+"itemDescEng": "Marketing Selling & Distrib. Expenses (-)",
+"value1": "-68214000000",
+"value2": "-44021000000",
+"value3": "-21121000000",
+"value4": "-88577260070"
+},
+{
+"itemCode": "3DB",
+"itemDescTr": "Genel Yönetim Giderleri (-)",
+"itemDescEng": "General Administrative Expenses (-)",
+"value1": "-21611000000",
+"value2": "-13300000000",
+"value3": "-7544000000",
+"value4": "-25825658597"
+},
+{
+"itemCode": "3DEA",
+"itemDescTr": "Faaliyet Karı Öncesi Diğer Gelir ve Giderler",
+"itemDescEng": "Other Income (Expenses) Before Operating Profits",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3DF",
+"itemDescTr": "FAALİYET KARI (ZARARI)",
+"itemDescEng": "OPERATING PROFITS",
+"value1": "39026000000",
+"value2": "-5098000000",
+"value3": "-2451000000",
+"value4": "112045864239"
+},
+{
+"itemCode": "3H",
+"itemDescTr": "Net Faaliyet Kar/Zararı",
+"itemDescEng": "Net Operating Profits",
+"value1": "20556000000",
+"value2": "-14734000000",
+"value3": "-7097000000",
+"value4": "78984943630"
+},
+{
+"itemCode": "3I",
+"itemDescTr": "SÜRDÜRÜLEN FAALİYETLER VERGİ ÖNCESİ KARI (ZARARI)",
+"itemDescEng": "PROFIT BEFORE TAX FROM CONTINUING OPERATIONS ",
+"value1": "79172000000",
+"value2": "14006000000",
+"value3": "4408000000",
+"value4": "171033140390"
+},
+{
+"itemCode": "3L",
+"itemDescTr": "DÖNEM KARI (ZARARI)",
+"itemDescEng": "NET PROFIT AFTER TAXES",
+"value1": "80228000000",
+"value2": "18766000000",
+"value3": "9856000000",
+"value4": "146839766848"
+},
+{
+"itemCode": "3LB",
+"itemDescTr": "Azınlık Payları",
+"itemDescEng": "Minority Interests",
+"value1": "-102000000",
+"value2": "-98000000",
+"value3": "-59000000",
+"value4": "-113128667"
+},
+{
+"itemCode": "3Z",
+"itemDescTr": "Ana Ortaklık Payları",
+"itemDescEng": "Parent Shares",
+"value1": "80330000000",
+"value2": "18864000000",
+"value3": "9915000000",
+"value4": "146952895515"
+},
+{
+"itemCode": "3ZD",
+"itemDescTr": "Hisse Başına Kazanç",
+"itemDescEng": "Earnings per Share",
+"value1": "58",
+"value2": "14",
+"value3": "7",
+"value4": "0"
+}
+]
+},
+{
+"periods": [
+[
+2025,
+9
+],
+[
+2025,
+6
+],
+[
+2025,
+3
+],
+[
+2024,
+12
+]
+],
+"url": "https://www.isyatirim.com.tr/_layouts/15/IsYatirim.Website/Common/Data.aspx/MaliTablo?companyCode=THYAO&exchange=TRY&financialGroup=XI_29&year1=2025&period1=9&year2=2025&period2=6&year3=2025&period3=3&year4=2024&period4=12",
+"value": [
+{
+"itemCode": "1A",
+"itemDescTr": "Dönen Varlıklar",
+"itemDescEng": "CURRENT ASSETS",
+"value1": "425657000000",
+"value2": "397076000000",
+"value3": "352676000000",
+"value4": "447533961344"
+},
+{
+"itemCode": "2OCF",
+"itemDescTr": "  Dönem Net Kar/Zararı",
+"itemDescEng": "Current Year Income /(Losses)",
+"value1": "81064000000",
+"value2": "25013000000",
+"value3": "-1854000000",
+"value4": "148375617139"
+},
+{
+"itemCode": "3C",
+"itemDescTr": "Satış Gelirleri",
+"itemDescEng": "Net Sales",
+"value1": "690825000000",
+"value2": "408036000000",
+"value3": "176712000000",
+"value4": "975710686451"
+},
+{
+"itemCode": "3CA",
+"itemDescTr": "Satışların Maliyeti (-)",
+"itemDescEng": "Cost Of Sales",
+"value1": "-572138000000",
+"value2": "-351890000000",
+"value3": "-164981000000",
+"value4": "-788655077233"
+},
+{
+"itemCode": "3CAB",
+"itemDescTr": "Ticari Faaliyetlerden Brüt Kar (Zarar)",
+"itemDescEng": "Gross Profit (Loss) from Trade Operations",
+"value1": "118687000000",
+"value2": "56146000000",
+"value3": "11731000000",
+"value4": "187055609218"
+},
+{
+"itemCode": "3D",
+"itemDescTr": "BRÜT KAR (ZARAR)",
+"itemDescEng": "GROSS PROFIT (LOSS)",
+"value1": "118687000000",
+"value2": "56146000000",
+"value3": "11731000000",
+"value4": "187055609218"
+},
+{
+"itemCode": "3DA",
+"itemDescTr": "Pazarlama, Satış ve Dağıtım Giderleri (-)",
+"itemDescEng": "Marketing Selling & Distrib. Expenses (-)",
+"value1": "-52224000000",
+"value2": "-33114000000",
+"value3": "-15794000000",
+"value4": "-78905822561"
+},
+{
+"itemCode": "3DB",
+"itemDescTr": "Genel Yönetim Giderleri (-)",
+"itemDescEng": "General Administrative Expenses (-)",
+"value1": "-15451000000",
+"value2": "-9747000000",
+"value3": "-6183000000",
+"value4": "-24444142400"
+},
+{
+"itemCode": "3DEA",
+"itemDescTr": "Faaliyet Karı Öncesi Diğer Gelir ve Giderler",
+"itemDescEng": "Other Income (Expenses) Before Operating Profits",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3DF",
+"itemDescTr": "FAALİYET KARI (ZARARI)",
+"itemDescEng": "OPERATING PROFITS",
+"value1": "67607000000",
+"value2": "24529000000",
+"value3": "-2879000000",
+"value4": "105228269879"
+},
+{
+"itemCode": "3H",
+"itemDescTr": "Net Faaliyet Kar/Zararı",
+"itemDescEng": "Net Operating Profits",
+"value1": "51012000000",
+"value2": "13285000000",
+"value3": "-10246000000",
+"value4": "83705644257"
+},
+{
+"itemCode": "3I",
+"itemDescTr": "SÜRDÜRÜLEN FAALİYETLER VERGİ ÖNCESİ KARI (ZARARI)",
+"itemDescEng": "PROFIT BEFORE TAX FROM CONTINUING OPERATIONS ",
+"value1": "94060000000",
+"value2": "28985000000",
+"value3": "-1929000000",
+"value4": "158930774532"
+},
+{
+"itemCode": "3L",
+"itemDescTr": "DÖNEM KARI (ZARARI)",
+"itemDescEng": "NET PROFIT AFTER TAXES",
+"value1": "80951000000",
+"value2": "24935000000",
+"value3": "-1854000000",
+"value4": "148375617139"
+},
+{
+"itemCode": "3LB",
+"itemDescTr": "Azınlık Payları",
+"itemDescEng": "Minority Interests",
+"value1": "-113000000",
+"value2": "-78000000",
+"value3": "-36000000",
+"value4": "-27487389"
+},
+{
+"itemCode": "3Z",
+"itemDescTr": "Ana Ortaklık Payları",
+"itemDescEng": "Parent Shares",
+"value1": "81064000000",
+"value2": "25013000000",
+"value3": "-1818000000",
+"value4": "148403104528"
+},
+{
+"itemCode": "3ZD",
+"itemDescTr": "Hisse Başına Kazanç",
+"itemDescEng": "Earnings per Share",
+"value1": "59",
+"value2": "18",
+"value3": "-1",
+"value4": "0"
+}
+]
+},
+{
+"periods": [
+[
+2024,
+9
+],
+[
+2024,
+6
+],
+[
+2024,
+3
+],
+[
+2023,
+12
+]
+],
+"url": "https://www.isyatirim.com.tr/_layouts/15/IsYatirim.Website/Common/Data.aspx/MaliTablo?companyCode=THYAO&exchange=TRY&financialGroup=XI_29&year1=2024&period1=9&year2=2024&period2=6&year3=2024&period3=3&year4=2023&period4=12",
+"value": [
+{
+"itemCode": "1A",
+"itemDescTr": "Dönen Varlıklar",
+"itemDescEng": "CURRENT ASSETS",
+"value1": "338882000000",
+"value2": "312030000000",
+"value3": "275598000000",
+"value4": "251895000000"
+},
+{
+"itemCode": "2OCF",
+"itemDescTr": "  Dönem Net Kar/Zararı",
+"itemDescEng": "Current Year Income /(Losses)",
+"value1": "88831000000",
+"value2": "37309000000",
+"value3": "6918000000",
+"value4": "162998000000"
+},
+{
+"itemCode": "3C",
+"itemDescTr": "Satış Gelirleri",
+"itemDescEng": "Net Sales",
+"value1": "551928000000",
+"value2": "330113000000",
+"value3": "147238000000",
+"value4": "504398000000"
+},
+{
+"itemCode": "3CA",
+"itemDescTr": "Satışların Maliyeti (-)",
+"itemDescEng": "Cost Of Sales",
+"value1": "-439603000000",
+"value2": "-278727000000",
+"value3": "-131098000000",
+"value4": "-384952000000"
+},
+{
+"itemCode": "3CAB",
+"itemDescTr": "Ticari Faaliyetlerden Brüt Kar (Zarar)",
+"itemDescEng": "Gross Profit (Loss) from Trade Operations",
+"value1": "112325000000",
+"value2": "51386000000",
+"value3": "16140000000",
+"value4": "119446000000"
+},
+{
+"itemCode": "3D",
+"itemDescTr": "BRÜT KAR (ZARAR)",
+"itemDescEng": "GROSS PROFIT (LOSS)",
+"value1": "112325000000",
+"value2": "51386000000",
+"value3": "16140000000",
+"value4": "119446000000"
+},
+{
+"itemCode": "3DA",
+"itemDescTr": "Pazarlama, Satış ve Dağıtım Giderleri (-)",
+"itemDescEng": "Marketing Selling & Distrib. Expenses (-)",
+"value1": "-43636000000",
+"value2": "-28840000000",
+"value3": "-13716000000",
+"value4": "-41901000000"
+},
+{
+"itemCode": "3DB",
+"itemDescTr": "Genel Yönetim Giderleri (-)",
+"itemDescEng": "General Administrative Expenses (-)",
+"value1": "-12533000000",
+"value2": "-6942000000",
+"value3": "-3332000000",
+"value4": "-10622000000"
+},
+{
+"itemCode": "3DEA",
+"itemDescTr": "Faaliyet Karı Öncesi Diğer Gelir ve Giderler",
+"itemDescEng": "Other Income (Expenses) Before Operating Profits",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3DF",
+"itemDescTr": "FAALİYET KARI (ZARARI)",
+"itemDescEng": "OPERATING PROFITS",
+"value1": "65355000000",
+"value2": "20307000000",
+"value3": "1203000000",
+"value4": "71425000000"
+},
+{
+"itemCode": "3H",
+"itemDescTr": "Net Faaliyet Kar/Zararı",
+"itemDescEng": "Net Operating Profits",
+"value1": "56156000000",
+"value2": "15604000000",
+"value3": "-908000000",
+"value4": "66923000000"
+},
+{
+"itemCode": "3I",
+"itemDescTr": "SÜRDÜRÜLEN FAALİYETLER VERGİ ÖNCESİ KARI (ZARARI)",
+"itemDescEng": "PROFIT BEFORE TAX FROM CONTINUING OPERATIONS ",
+"value1": "89465000000",
+"value2": "32778000000",
+"value3": "5095000000",
+"value4": "91282000000"
+},
+{
+"itemCode": "3L",
+"itemDescTr": "DÖNEM KARI (ZARARI)",
+"itemDescEng": "NET PROFIT AFTER TAXES",
+"value1": "88831000000",
+"value2": "37309000000",
+"value3": "6918000000",
+"value4": "162998000000"
+},
+{
+"itemCode": "3LB",
+"itemDescTr": "Azınlık Payları",
+"itemDescEng": "Minority Interests",
+"value1": "-35000000",
+"value2": "-17000000",
+"value3": "-13000000",
+"value4": "-5000000"
+},
+{
+"itemCode": "3Z",
+"itemDescTr": "Ana Ortaklık Payları",
+"itemDescEng": "Parent Shares",
+"value1": "88866000000",
+"value2": "37326000000",
+"value3": "6931000000",
+"value4": "163003000000"
+},
+{
+"itemCode": "3ZD",
+"itemDescTr": "Hisse Başına Kazanç",
+"itemDescEng": "Earnings per Share",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+}
+]
+},
+{
+"periods": [
+[
+2023,
+9
+],
+[
+2023,
+6
+],
+[
+2023,
+3
+],
+[
+2022,
+12
+]
+],
+"url": "https://www.isyatirim.com.tr/_layouts/15/IsYatirim.Website/Common/Data.aspx/MaliTablo?companyCode=THYAO&exchange=TRY&financialGroup=XI_29&year1=2023&period1=9&year2=2023&period2=6&year3=2023&period3=3&year4=2022&period4=12",
+"value": [
+{
+"itemCode": "1A",
+"itemDescTr": "Dönen Varlıklar",
+"itemDescEng": "CURRENT ASSETS",
+"value1": "254233000000",
+"value2": "220567000000",
+"value3": "151513000000",
+"value4": "135095000000"
+},
+{
+"itemCode": "2OCF",
+"itemDescTr": "  Dönem Net Kar/Zararı",
+"itemDescEng": "Current Year Income /(Losses)",
+"value1": "69502000000",
+"value2": "18173000000",
+"value3": "4415000000",
+"value4": "47432000000"
+},
+{
+"itemCode": "3C",
+"itemDescTr": "Satış Gelirleri",
+"itemDescEng": "Net Sales",
+"value1": "358781000000",
+"value2": "189690000000",
+"value3": "82057000000",
+"value4": "311169000000"
+},
+{
+"itemCode": "3CA",
+"itemDescTr": "Satışların Maliyeti (-)",
+"itemDescEng": "Cost Of Sales",
+"value1": "-262188000000",
+"value2": "-150222000000",
+"value3": "-69839000000",
+"value4": "-235528000000"
+},
+{
+"itemCode": "3CAB",
+"itemDescTr": "Ticari Faaliyetlerden Brüt Kar (Zarar)",
+"itemDescEng": "Gross Profit (Loss) from Trade Operations",
+"value1": "96593000000",
+"value2": "39468000000",
+"value3": "12218000000",
+"value4": "75641000000"
+},
+{
+"itemCode": "3D",
+"itemDescTr": "BRÜT KAR (ZARAR)",
+"itemDescEng": "GROSS PROFIT (LOSS)",
+"value1": "96593000000",
+"value2": "39468000000",
+"value3": "12218000000",
+"value4": "75641000000"
+},
+{
+"itemCode": "3DA",
+"itemDescTr": "Pazarlama, Satış ve Dağıtım Giderleri (-)",
+"itemDescEng": "Marketing Selling & Distrib. Expenses (-)",
+"value1": "-29266000000",
+"value2": "-17214000000",
+"value3": "-7844000000",
+"value4": "-23209000000"
+},
+{
+"itemCode": "3DB",
+"itemDescTr": "Genel Yönetim Giderleri (-)",
+"itemDescEng": "General Administrative Expenses (-)",
+"value1": "-7193000000",
+"value2": "-4424000000",
+"value3": "-1844000000",
+"value4": "-4701000000"
+},
+{
+"itemCode": "3DEA",
+"itemDescTr": "Faaliyet Karı Öncesi Diğer Gelir ve Giderler",
+"itemDescEng": "Other Income (Expenses) Before Operating Profits",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+},
+{
+"itemCode": "3DF",
+"itemDescTr": "FAALİYET KARI (ZARARI)",
+"itemDescEng": "OPERATING PROFITS",
+"value1": "65678000000",
+"value2": "19290000000",
+"value3": "2151000000",
+"value4": "48811000000"
+},
+{
+"itemCode": "3H",
+"itemDescTr": "Net Faaliyet Kar/Zararı",
+"itemDescEng": "Net Operating Profits",
+"value1": "60134000000",
+"value2": "17830000000",
+"value3": "2530000000",
+"value4": "47731000000"
+},
+{
+"itemCode": "3I",
+"itemDescTr": "SÜRDÜRÜLEN FAALİYETLER VERGİ ÖNCESİ KARI (ZARARI)",
+"itemDescEng": "PROFIT BEFORE TAX FROM CONTINUING OPERATIONS ",
+"value1": "85898000000",
+"value2": "24298000000",
+"value3": "5218000000",
+"value4": "51403000000"
+},
+{
+"itemCode": "3L",
+"itemDescTr": "DÖNEM KARI (ZARARI)",
+"itemDescEng": "NET PROFIT AFTER TAXES",
+"value1": "69502000000",
+"value2": "18173000000",
+"value3": "4415000000",
+"value4": "47432000000"
+},
+{
+"itemCode": "3LB",
+"itemDescTr": "Azınlık Payları",
+"itemDescEng": "Minority Interests",
+"value1": "-1000000",
+"value2": "1000000",
+"value3": "-3000000",
+"value4": "3000000"
+},
+{
+"itemCode": "3Z",
+"itemDescTr": "Ana Ortaklık Payları",
+"itemDescEng": "Parent Shares",
+"value1": "69503000000",
+"value2": "18172000000",
+"value3": "4418000000",
+"value4": "47429000000"
+},
+{
+"itemCode": "3ZD",
+"itemDescTr": "Hisse Başına Kazanç",
+"itemDescEng": "Earnings per Share",
+"value1": "0",
+"value2": "0",
+"value3": "0",
+"value4": "0"
+}
+]
+}
+]
+}
+}
+}

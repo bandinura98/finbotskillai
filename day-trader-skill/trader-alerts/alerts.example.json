@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {"id": "opening-bell", "type": "opening_bell"},
+    {"id": "thyao-plan-stop", "symbol": "THYAO", "type": "stop", "price": 282.00, "note": "plan stop: opening-range midpoint", "date": "2026-11-09"},
+    {"id": "thyao-plan-target", "symbol": "THYAO", "type": "target", "price": 289.00, "note": "plan target: 1R (one times the risk)", "date": "2026-11-09"},
+    {"id": "thyao-flat-by", "symbol": "THYAO", "type": "time", "at": "17:50", "label": "flat by close", "before_close": true, "date": "2026-11-09"},
+    {"id": "asels-move-3", "symbol": "ASELS", "type": "pct_move", "pct": 3},
+    {"id": "garan-near-limit-1", "symbol": "GARAN", "type": "near_limit", "pct": 1}
+  ]
+}
