@@ -1,0 +1,25 @@
+{
+  "as_of": "2026-11-09",
+  "currency": "TRY",
+  "companies": [
+    {
+      "ticker": "ASELS",
+      "name": "ASELS",
+      "financial_group": "XI_29",
+      "currency": "TRY",
+      "period_end": "2026-09-30",
+      "quarter": "Q3 2026",
+      "revenue_ttm": 257919947596.0,
+      "net_income_ttm": 48588453949.0,
+      "eps_ttm": null,
+      "net_income_basis": "parent",
+      "revenue_growth_yoy": 34.2,
+      "eps_growth_yoy": null,
+      "net_income_growth_yoy": 80.8,
+      "gross_margin": 30.8,
+      "operating_margin": 26.6,
+      "net_margin": 19.1,
+      "source": "İş Yatırım MaliTablo (unofficial endpoint)"
+    }
+  ]
+}

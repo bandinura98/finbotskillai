@@ -1,0 +1,559 @@
+KULLANICI:
+Claude Code
+jakes chincari day trader skills nedir
+
+Ağam, aradığın şey büyük ihtimalle Jake Schincariol’un “day-trader-skill” adlı GitHub projesi. “chincari” soyadının bir kısmı.
+
+Ne olduğu:
+
+Claude (Claude Code) için yazılmış 11 skill’lik bir paket. Her skill ayrı bir trader-* klasöründe duruyor.
+Yaptıkları şunlar:
+Binlerce grafiği tarayıp fırsat arıyor.
+Son dakika haberlerini takip ediyor.
+Giriş ve çıkış noktalarını planlıyor.
+Risk kontrolü yapıp alarm kuruyor.
+Para koymadan önce işlemin nasıl sonuçlanacağını geçmiş veriyle tekrar oynatıyor (replay).
+Kaynaklara göre Yahoo Finance grafikleri ve SEC dosyaları gibi açık verileri kullanıyor.
+Varsayılan mod kâğıt üzerinde işlem (paper trading), yani gerçek para kullanmıyor. Aracı kuruma (Alpaca) bağlanmak için ayrıca API anahtarı gerekiyor ve senin açık onayın olmadan hiçbir emir gitmiyor.
+Nasıl kurulur: İki yol var.
+
+Repoyu klonlayıp trader-* klasörlerini ~/.claude/skills/ içine kopyalarsın. Sonra /trader-scanner gibi komutlarla kullanırsın.
+Plugin olarak kurarsın:
+/plugin marketplace add Jakeschincariol/day-trader-skill
+Bu yolda komutların başına paket adı gelir, örneğin /day-trader-skill:trader-scanner.
+
+Dikkat edilecekler:
+
+Hindistan borsalarına (NSE/BSE) uyarlanmış 14 skill’lik bir kopyası da var (aditya76792).
+Üçüncü taraf sitelerdeki yıldız sayıları ve açıklamalar birbirini tutmuyor. Yıldız sayısı 436 ile 5.9k arasında değişiyor. Bilgiyi doğrudan repodan kontrol et.
+Bu bir araç, yatırım tavsiyesi değil. Ben de lisanslı danışman değilim. Gerçek parayla kullanmadan önce uzun süre paper trading modunda denemeni öneririm.
+Kaynaklar:
+
+GitHub – Jakeschincariol/day-trader-skill
+GitHub – aditya76792/day-trader-skill
+Enterprise DNA – Trading skills packaged for Claude
+gitdiscover – repo analizi
+opusjake.ai – Day Trader Skill
+QAI – trader-broker skill
+Moneyflock – Claude Day Trader Skill
+skillsllm – day-trader-skill
+https://github.com/Jakeschincariol/day-trader-skill bunu şimdi ben mesela çeksem örnek veriyorum istediğim borsaya uyarlayabiliriz demi ?
+
+Evet ağam, uyarlanabilir. MIT lisanslı, yani çekip istediğin gibi değiştirmen serbest. Zaten biri Hindistan borsasına uyarlamış, nasıl yapılacağını oradan görebiliyoruz.
+
+Yapısı nasıl: 11 skill var. Her birinde Claude’a talimat veren bir SKILL.md ve standart kütüphaneyle yazılmış bir Python scripti bulunuyor, pip ile ek paket kurmak gerekmiyor. Yani uyarlama demek bu Python scriptlerini ve ayarları değiştirmek demek.
+
+Başka bir borsaya geçerken değişmesi gerekenler (örnek olarak Borsa İstanbul üzerinden):
+
+Konu	Şu anki hali (ABD)	BIST için ne olur
+Fiyat verisi	Yahoo Finance	Yahoo’da BIST hisseleri .IS ekiyle var (THYAO.IS). Büyük ihtimalle küçük bir değişiklik yeter
+Hisse listesi	Nasdaq Trader listeleri	BIST 30/100 veya tüm hisse listesi
+Saat dilimi ve seans	ET, 09:30–16:00	TRT, 10:00–18:00; tatil takvimi de değişir
+Haberler	Yahoo + SEC 8-K	KAP bildirimleri. En çok iş isteyen kısım bu
+Bilanço verisi (trader-analyst)	SEC XBRL	KAP finansal tabloları
+Kongre işlemleri (trader-pelosi)	ABD’ye özel	Çıkarılır, yerine içeriden öğrenen işlemleri konabilir
+Aracı kurum (trader-broker)	Alpaca API	Türkiye’de Alpaca gibi açık API’si olan kurum az. Bu kısım ya kaldırılır ya da sadece emir fişi üretecek hale getirilir
+Kurallar ve maliyetler	ABD’nin günlük işlem kuralı (PDT), ABD vergileri	Fiyat adımları, taban/tavan, BSMV/komisyon, stopaj
+Hindistan uyarlamasında da aynı yol izlenmiş. Borsaya özel her şey (takvim, seans saatleri, fiyat adımı, maliyet hesabı) tek bir ortak modülde (trader-market/market.py) toplanmış, diğer skill’ler bu modülü kullanıyor. Biz de aynı yöntemi izleyebiliriz.
+
+Zorluk: Tarama, giriş/çıkış planı, risk ve pozisyon büyüklüğü hesabı ile geçmiş veriyle test (replay) kısmı görece kolay uyarlanır. Zor olan iki kısım var: KAP’tan haber ve bilanço çekmek ile gerçek emir göndermek.
+
+Hangi borsayı düşünüyorsun ağam? BIST ise repoyu D:\co altına çekip önce kodu inceleyeyim, sonra neyin nasıl değişeceğini netleştirip başlayalım.
+
+
+yap indir ve uyarla saol
+
+------------------------------------------------------------
+
+KULLANICI:
+Claude Code
+jakes chincari day trader skills nedir
+
+Ağam, aradığın şey büyük ihtimalle Jake Schincariol’un “day-trader-skill” adlı GitHub projesi. “chincari” soyadının bir kısmı.
+
+Ne olduğu:
+
+Claude (Claude Code) için yazılmış 11 skill’lik bir paket. Her skill ayrı bir trader-* klasöründe duruyor.
+Yaptıkları şunlar:
+Binlerce grafiği tarayıp fırsat arıyor.
+Son dakika haberlerini takip ediyor.
+Giriş ve çıkış noktalarını planlıyor.
+Risk kontrolü yapıp alarm kuruyor.
+Para koymadan önce işlemin nasıl sonuçlanacağını geçmiş veriyle tekrar oynatıyor (replay).
+Kaynaklara göre Yahoo Finance grafikleri ve SEC dosyaları gibi açık verileri kullanıyor.
+Varsayılan mod kâğıt üzerinde işlem (paper trading), yani gerçek para kullanmıyor. Aracı kuruma (Alpaca) bağlanmak için ayrıca API anahtarı gerekiyor ve senin açık onayın olmadan hiçbir emir gitmiyor.
+Nasıl kurulur: İki yol var.
+
+Repoyu klonlayıp trader-* klasörlerini ~/.claude/skills/ içine kopyalarsın. Sonra /trader-scanner gibi komutlarla kullanırsın.
+Plugin olarak kurarsın:
+/plugin marketplace add Jakeschincariol/day-trader-skill
+Bu yolda komutların başına paket adı gelir, örneğin /day-trader-skill:trader-scanner.
+
+Dikkat edilecekler:
+
+Hindistan borsalarına (NSE/BSE) uyarlanmış 14 skill’lik bir kopyası da var (aditya76792).
+Üçüncü taraf sitelerdeki yıldız sayıları ve açıklamalar birbirini tutmuyor. Yıldız sayısı 436 ile 5.9k arasında değişiyor. Bilgiyi doğrudan repodan kontrol et.
+Bu bir araç, yatırım tavsiyesi değil. Ben de lisanslı danışman değilim. Gerçek parayla kullanmadan önce uzun süre paper trading modunda denemeni öneririm.
+Kaynaklar:
+
+GitHub – Jakeschincariol/day-trader-skill
+GitHub – aditya76792/day-trader-skill
+Enterprise DNA – Trading skills packaged for Claude
+gitdiscover – repo analizi
+opusjake.ai – Day Trader Skill
+QAI – trader-broker skill
+Moneyflock – Claude Day Trader Skill
+skillsllm – day-trader-skill
+https://github.com/Jakeschincariol/day-trader-skill bunu şimdi ben mesela çeksem örnek veriyorum istediğim borsaya uyarlayabiliriz demi ?
+
+Evet ağam, uyarlanabilir. MIT lisanslı, yani çekip istediğin gibi değiştirmen serbest. Zaten biri Hindistan borsasına uyarlamış, nasıl yapılacağını oradan görebiliyoruz.
+
+Yapısı nasıl: 11 skill var. Her birinde Claude’a talimat veren bir SKILL.md ve standart kütüphaneyle yazılmış bir Python scripti bulunuyor, pip ile ek paket kurmak gerekmiyor. Yani uyarlama demek bu Python scriptlerini ve ayarları değiştirmek demek.
+
+Başka bir borsaya geçerken değişmesi gerekenler (örnek olarak Borsa İstanbul üzerinden):
+
+Konu	Şu anki hali (ABD)	BIST için ne olur
+Fiyat verisi	Yahoo Finance	Yahoo’da BIST hisseleri .IS ekiyle var (THYAO.IS). Büyük ihtimalle küçük bir değişiklik yeter
+Hisse listesi	Nasdaq Trader listeleri	BIST 30/100 veya tüm hisse listesi
+Saat dilimi ve seans	ET, 09:30–16:00	TRT, 10:00–18:00; tatil takvimi de değişir
+Haberler	Yahoo + SEC 8-K	KAP bildirimleri. En çok iş isteyen kısım bu
+Bilanço verisi (trader-analyst)	SEC XBRL	KAP finansal tabloları
+Kongre işlemleri (trader-pelosi)	ABD’ye özel	Çıkarılır, yerine içeriden öğrenen işlemleri konabilir
+Aracı kurum (trader-broker)	Alpaca API	Türkiye’de Alpaca gibi açık API’si olan kurum az. Bu kısım ya kaldırılır ya da sadece emir fişi üretecek hale getirilir
+Kurallar ve maliyetler	ABD’nin günlük işlem kuralı (PDT), ABD vergileri	Fiyat adımları, taban/tavan, BSMV/komisyon, stopaj
+Hindistan uyarlamasında da aynı yol izlenmiş. Borsaya özel her şey (takvim, seans saatleri, fiyat adımı, maliyet hesabı) tek bir ortak modülde (trader-market/market.py) toplanmış, diğer skill’ler bu modülü kullanıyor. Biz de aynı yöntemi izleyebiliriz.
+
+Zorluk: Tarama, giriş/çıkış planı, risk ve pozisyon büyüklüğü hesabı ile geçmiş veriyle test (replay) kısmı görece kolay uyarlanır. Zor olan iki kısım var: KAP’tan haber ve bilanço çekmek ile gerçek emir göndermek.
+
+Hangi borsayı düşünüyorsun ağam? BIST ise repoyu D:\co altına çekip önce kodu inceleyeyim, sonra neyin nasıl değişeceğini netleştirip başlayalım.
+
+
+yap indir ve uyarla saol
+
+------------------------------------------------------------
+
+CLAUDE:
+Now I'll write the shared BIST spec file.
+
+------------------------------------------------------------
+
+CLAUDE:
+Şimdi işi 5 paralel ajana bölüyorum. Hepsi aynı spec dosyasına göre çalışacak.
+
+------------------------------------------------------------
+
+CLAUDE:
+Şimdi işi 5 paralel ajana bölüyorum. Hepsi aynı spec dosyasına göre çalışacak.
+
+------------------------------------------------------------
+
+CLAUDE:
+While the agents work, I'll remove the US-only Congress tracker (pelosi) and rewrite the README and plugin manifest for BIST.
+
+------------------------------------------------------------
+
+CLAUDE:
+While the agents work, I'll remove the US-only Congress tracker (pelosi) and rewrite the README and plugin manifest for BIST.
+
+------------------------------------------------------------
+
+CLAUDE:
+Waiting for the agents to finish.
+
+------------------------------------------------------------
+
+CLAUDE:
+Ajanlar arka planda çalışıyor. Hepsi bitince çıktılarını kontrol edip tutarlılığı sağlayacağım.
+
+------------------------------------------------------------
+
+CLAUDE:
+Scanner agent finished. Waiting for the remaining four.
+
+------------------------------------------------------------
+
+CLAUDE:
+Scanner and news/analyst are done. Waiting for the other three agents (entry/exit, timemachine/alerts, risk/budget/broker).
+
+------------------------------------------------------------
+
+CLAUDE:
+Timemachine/alerts done. Two left (entry/exit, risk/budget/broker).
+
+------------------------------------------------------------
+
+CLAUDE:
+Entry/exit is done. One agent left (risk/budget/broker). When it finishes I'll fix a cross-cutting issue: the Windows console encoding, since the scripts now print "TSİ" and "₺/İ" characters.
+
+------------------------------------------------------------
+
+CLAUDE:
+All five agents are done. Now I'll scan the whole repo for leftover US references and check consistency.
+
+------------------------------------------------------------
+
+CLAUDE:
+All five agents are done. Now I'll scan the whole repo for leftover US references and check consistency.
+
+------------------------------------------------------------
+
+CLAUDE:
+No US leftovers. Now checking console encoding across the scripts: on Windows, printing "TSİ" can crash.
+
+------------------------------------------------------------
+
+CLAUDE:
+The risk/budget/broker scripts guard against this; the other seven don't. I'll add the same guard to them.
+
+------------------------------------------------------------
+
+CLAUDE:
+The risk/budget/broker scripts guard against this; the other seven don't. I'll add the same guard to them.
+
+------------------------------------------------------------
+
+CLAUDE:
+Ağam, repoyu indirip Borsa İstanbul'a uyarladım ama henüz hiçbir script'i gerçek veriyle çalıştırmadım. Hepsi hatasız derleniyor, o kadar. İndirilen kodu çalıştırma iznim reddedildi, o yüzden testleri de koşamadım.
+
+Kod `D:\finaisikil\day-trader-skill` altında, `bist` dalında duruyor. Orijinal ABD sürümü `main` dalında kaldı. Commit atmadım.
+
+**Ne değişti**
+
+| Konu | Önce (ABD) | Şimdi (BIST) |
+|---|---|---|
+| Saat | New York, yaz saatli | İstanbul (TSİ), sabit UTC+3 |
+| Seans | 09:30–16:00 | 10:00–18:00, yarım günlerde 12:30'a kadar |
+| Tatiller | NYSE takvimi | 2026 BIST resmi takvimi |
+| Semboller | TSLA | THYAO yazıyorsun, araç Yahoo için `.IS` ekini kendisi ekliyor |
+| Hisse listesi | Nasdaq listeleri | [bist_universe.txt](trader-scanner/bist_universe.txt) içinde 108 hisse, elle düzenlenebilir |
+| Fiyat | 0,01 $ adım | BIST fiyat adımı tablosu; stop aşağı, hedef yukarı yuvarlanıyor |
+| Günlük limit | yok | Taban/tavan ±%10: stop tabanın altında, hedef tavanın üstündeyse risk kontrolü işlemi engelliyor |
+| Maliyet | yok | Komisyon + BSMV + borsa payı lot hesabına ve maksimum zarara dahil |
+| Haberler | SEC 8-K | Türkçe Google Haberler + Yahoo; resmî bildirimler için KAP linki |
+| Bilanço | SEC | İş Yatırım mali tablo verisi; çeyrekler kümülatif rakamlardan ayrıştırılıyor |
+| Aracı kurum | Alpaca'ya emir | Hiçbir yere emir gitmiyor. Sen "evet" deyince kendi uygulamana gireceğin bir **emir fişi** basılıyor |
+| Pelosi skill'i | vardı | ABD'ye özel olduğu için kaldırıldı |
+
+Bütün piyasa kuralları tek dosyada: [docs/BIST-SPEC.md](docs/BIST-SPEC.md). Türkçe kullanım rehberi [README.md](README.md) içinde. Her skill Claude'a seninle Türkçe konuşmasını söylüyor.
+
+**Kontrol etmen gerekenler**
+- **2027 tarihleri tahmini.** Ramazan ve Kurban Bayramı günleri ile yarım günler tahmin. Borsa İstanbul 2027 takvimini açıklayınca güncellenmeli.
+- **Yarım gün kapanış saati belirsiz.** Kaynaklar 12:30, 12:40 ve 13:00 diyor; ben 12:30 aldım.
+- **Fiyat adımı tablosu ezberden.** Pay Piyasası Prosedürü §5.1.9 ile karşılaştırılmalı.
+- **Komisyon oranı.** Varsayılan binde 1,5. Kendi aracı kurumunun oranını `trader/config.json`'a yazmalısın. Bu maliyetler küçük hedefli işlemlerde ödül/risk oranını gözle görülür düşürüyor; örnekte 1R'lik hedef masraflardan sonra 0,64'e iniyor.
+- **İş Yatırım verisinin biçimi tahmin.** Bu uç nokta resmî değil ve hiç denenmedi; ilk çalıştırmada uyuşmazlık çıkabilir. Bankalarda ciro satırı eşleşmeyebilir.
+- **Veri gecikmeli.** Yahoo'nun BIST verisi genellikle ~15 dakika geride; giriş anlarını aracı kurum ekranından doğrula.
+- **Hisse listesi kesin değil.** Liste BIST 100'e yakın ama birebir değil. Adı değiştiği tahmin edilen birkaç kod (KOZAL, KOZAA, IPEKE) bilinçli olarak dışarıda bırakıldı.
+
+**Testler** hâlâ ABD verisiyle (TSLA, Alpaca, $) yazılı, şu haliyle çoğu kırılır. İzin verirsen BIST'e göre yeniden yazıp çalıştırırım; komut izni sorduğunda onaylaman yeterli. İstersen kendin de deneyebilirsin:
+
+```bash
+cd /d/finaisikil/day-trader-skill && python trader-alerts/alerts.py clock
+```
+
+Yatırım tavsiyesi değildir; gerçek parayla kullanmadan önce uzun süre kâğıt üzerinde dene.
+
+Kaynaklar (tatil ve seans bilgileri):
+- [Bigpara – Kurban Bayramı borsa çalışma saatleri](https://bigpara.hurriyet.com.tr/borsa-haberleri/galeri-25-26-mayis-2026-borsa-acik-mi-islem-yapilacak-mi-kurban-bayrami-borsa-istanbul-bist-calisma-saatleri_ID100701820/)
+- [Politikam – 28 Ekim borsa saatleri 2026](https://www.politikam.com/28-ekim-borsa-acik-mi-kacta-kapaniyor-2026)
+- [Midas – Borsa İstanbul'un kapalı olduğu günler](https://www.getmidas.com/destek/borsa-istanbul/bist-piyasa-bilgileri/borsa-istanbulun-kapali-oldugu-ozel-gunler)
+- [QNB Invest – Hisse senedi işlem saatleri](https://www.qnbinvest.com.tr/hisse-senedi-islem-saatleri)
+- [Borsa İstanbul – Pay Piyasası Prosedürü](https://borsaistanbul.com/files/pay-piyasasi-proseduru.pdf)
+
+------------------------------------------------------------
+
+KULLANICI:
+Evet, test et
+
+------------------------------------------------------------
+
+CLAUDE:
+Üretici çalışıyor. Şimdi testleri yeniden yazmak için 5 ajanı yine aynı gruplarla paralel başlatıyorum. Her ajan kendi script'lerinde bulduğu hataları da düzeltecek.
+
+------------------------------------------------------------
+
+CLAUDE:
+Üretici çalışıyor. Şimdi testleri yeniden yazmak için 5 ajanı yine aynı gruplarla paralel başlatıyorum. Her ajan kendi script'lerinde bulduğu hataları da düzeltecek.
+
+------------------------------------------------------------
+
+CLAUDE:
+While the agents work, I'll update the repo structure test (test_repo.py) myself.
+
+------------------------------------------------------------
+
+CLAUDE:
+Now rewriting test_repo.py for the 10-skill BIST layout:
+
+------------------------------------------------------------
+
+CLAUDE:
+Now rewriting test_repo.py for the 10-skill BIST layout:
+
+------------------------------------------------------------
+
+CLAUDE:
+Repo testi geçiyor (14/14). Takvim tutarlılık testi de geçiyor, yani tatil listesi script'lerin hepsinde spec ile aynı. Diğer 5 ajanın bitmesini bekliyorum.
+
+------------------------------------------------------------
+
+CLAUDE:
+Scanner: 39/39 pass, one Windows path bug fixed. Waiting on the other four.
+
+------------------------------------------------------------
+
+CLAUDE:
+Entry/exit: 78/78 pass. It also fixed a real bug: `price:320,50` was read as 32050. The Safety sections are now worded differently across the SKILL.md files; I'll sync them after the remaining three agents finish.
+
+------------------------------------------------------------
+
+CLAUDE:
+Timemachine/alerts: 96/96 pass, with three real bugs fixed. It also found a shared problem: Yahoo sends float32 prices, so `round_tick(48.31999969, "down")` gives 48.30, one tick too low. I'll fix that in the spec and the finished agents' scripts. The risk/budget/broker agent is still running, so I'm sending it the fix for its scripts.
+
+------------------------------------------------------------
+
+CLAUDE:
+Fixing round_tick in the finished scripts and the spec:
+
+------------------------------------------------------------
+
+CLAUDE:
+Rounding fixed. Re-running the tests for the finished skills:
+
+------------------------------------------------------------
+
+CLAUDE:
+Rounding fixed. Re-running the tests for the finished skills:
+
+------------------------------------------------------------
+
+CLAUDE:
+228/228 pass. While two agents are still running, I'll look at the Safety sections in the SKILL.md files:
+
+------------------------------------------------------------
+
+CLAUDE:
+228/228 pass. While two agents are still running, I'll look at the Safety sections in the SKILL.md files:
+
+------------------------------------------------------------
+
+CLAUDE:
+They say the same thing in different words. I'll make the five order-path skills that are already finished use the trader-risk wording exactly:
+
+------------------------------------------------------------
+
+CLAUDE:
+They say the same thing in different words. I'll make the five order-path skills that are already finished use the trader-risk wording exactly:
+
+------------------------------------------------------------
+
+CLAUDE:
+Risk/budget/broker: 124/124 pass. It reports that `test_alerts.py` might still point at the deleted plan-tsla.json, so I'll check that:
+
+------------------------------------------------------------
+
+CLAUDE:
+Risk/budget/broker: 124/124 pass. It reports that `test_alerts.py` might still point at the deleted plan-tsla.json, so I'll check that:
+
+------------------------------------------------------------
+
+CLAUDE:
+That reference is already gone, nothing to fix. Only the news/analyst agent, which is checking live sources, is still running.
+
+------------------------------------------------------------
+
+CLAUDE:
+All five agents are done. Running the full suite:
+
+------------------------------------------------------------
+
+CLAUDE:
+All five agents are done. Running the full suite:
+
+------------------------------------------------------------
+
+CLAUDE:
+393/393 tests pass. Next I'll run the whole flow end to end in a scratch folder with synthetic data: entry → exit → timemachine → budget → risk → broker.
+
+------------------------------------------------------------
+
+CLAUDE:
+The path format was wrong for Windows Python. Trying again:
+
+------------------------------------------------------------
+
+CLAUDE:
+Entry, exit and timemachine work. One problem: "TSİ" comes out as "TS�" in a pipe. I'll switch the scripts to UTF-8 output, then continue the flow:
+
+------------------------------------------------------------
+
+CLAUDE:
+Entry, exit and timemachine work. One problem: "TSİ" comes out as "TS�" in a pipe. I'll switch the scripts to UTF-8 output, then continue the flow:
+
+------------------------------------------------------------
+
+CLAUDE:
+The whole flow works end to end, including the 181-lot and 994,76 TL numbers and the emir fişi. Last step: a short check with live data (borsa saati, a few-hisse daily scan, THYAO quote, news):
+
+------------------------------------------------------------
+
+CLAUDE:
+The whole flow works end to end, including the 181-lot and 994,76 TL numbers and the emir fişi. Last step: a short check with live data (borsa saati, a few-hisse daily scan, THYAO quote, news):
+
+------------------------------------------------------------
+
+CLAUDE:
+Live data works too. One last full run after the encoding change:
+
+------------------------------------------------------------
+
+CLAUDE:
+Live data works too. One last full run after the encoding change:
+
+------------------------------------------------------------
+
+CLAUDE:
+Ağam, test ettim, BIST sürümü çalışıyor: **393 testin hepsi geçti.** Bütün akışı uçtan uca ve canlı veriyle de denedim.
+
+**Testler:** Eski testlerin tamamı ABD verisine (TSLA, 9:30, $, Alpaca) dayanıyordu, o yüzden 292 testin 209'u kırıktı. Hepsini BIST'e göre yeniden yazdım. Fiyat verisi testlerde ürettiğim sahte (sentetik) THYAO mumlarından geliyor; haber ve bilanço testleri ise gerçek Google Haberler, Yahoo ve İş Yatırım cevaplarından kısaltılmış dosyalarla çalışıyor. Testler internete çıkmıyor.
+
+**Uçtan uca deneme (sentetik THYAO günü, 100.000 TL hesap, işlem başı en fazla 1.000 TL zarar):**
+- **Giriş:** 10:00–10:15 açılış aralığı yukarı kırıldı, giriş 312,50.
+- **Stop ve hedef:** stop 308,00, hedef 321,50. Komisyon, BSMV ve borsa payı düşülünce ödül/risk oranı 2,0'dan 1,45'e iniyor.
+- **Zaman Makinesi:** 2.000 simülasyonda önce stop gelme ihtimali %53, önce hedef %21. Masraflardan sonra beklenen sonuç hafif eksi.
+- **Lot ve risk:** 181 lot; stop'ta en fazla 994,76 TL zarar. Risk kontrolünden GEÇER aldı.
+- **Emir fişi:** Hisse, Yön, Lot, Zarar-durdur, Kâr-al ve tahmini maliyetle Türkçe basılıyor. Hiçbir yere emir gönderilmiyor.
+
+**Canlı deneme (bu sabah 08:52):**
+- **Borsa saati:** "kapalı, açılış seansı 09:40" dedi; doğru.
+- **Fiyatlar:** THYAO 299,25, ASELS 331,75, GARAN 144,30, taban ve tavanlarıyla geldi. Bunlar cuma kapanışı.
+- **Günlük tarama:** listedeki ilk 40 hissenin 34'ü likidite filtresinden geçti, 6'sında kurulum çıktı (BRSAN, ENJSA, AKSEN…).
+- **Haberler:** Google Haberler'den Türkçe THYAO haberleri ve KAP linki geldi.
+- **Bilanço:** İş Yatırım'dan THYAO çeyreklik tabloları çekiliyor. Bankalar (GARAN) farklı tablo formatıyla çalışıyor.
+
+**Testlerin ortaya çıkardığı ve düzelttiğim gerçek hatalar:**
+- **Ondalık virgül:** `price:320,50` yazınca 32050 olarak okunuyordu, `pct:1,5` de %15 oluyordu.
+- **Fiyat adımı yuvarlama:** Yahoo'nun yuvarlama hatalı fiyatları (48,32 yerine 48,3199…) stop'u bir adım aşağı kaydırıyordu.
+- **Yarım gün alarmı:** "kapanış öncesi" alarmı yarım günlerde iki kez kaydırılıp sabah çalıyordu.
+- **Bilanço:** İş Yatırım'da faaliyet kârı yanlış satırdan okunuyordu; bankaların net kârı da hiç eşleşmiyordu.
+- **Onay:** sepette sadece THYAO varken "evet ASELS" onay olarak kabul ediliyordu.
+- **Windows çıktısı:** Türkçe karakterler "TS�" diye bozuk çıkıyordu; çıktı artık UTF-8.
+
+**Hâlâ senin kontrol etmen gerekenler:**
+- **2027 tatilleri:** bayram tarihleri tahmini.
+- **Yarım gün kapanışı:** 12:30 aldım, kaynaklar 12:30 ile 13:00 arasında farklı söylüyor.
+- **Fiyat adımı tablosu:** ezberden yazıldı, Pay Piyasası Prosedürü ile karşılaştırılmalı.
+- **Komisyon oranı:** varsayılan binde 1,5; kendi aracı kurumunun oranını `trader/config.json`'a yaz.
+- **Veri gecikmesi:** Yahoo'nun BIST verisi ~15 dakika gecikmeli.
+- **Bilanço çeyrekleri:** enflasyon muhasebesi (TMS 29) yüzünden kümülatif rakamlardan ayrıştırılan çeyrekler yaklaşık.
+- **Saat biçimi:** bazı çıktılarda giriş saati hâlâ "10:25 AM" biçiminde; işe engel değil.
+
+Değişiklikler `D:\finaisikil\day-trader-skill` altında, `bist` dalında; henüz commit etmedim. Kullanmaya başlamak için `trader-*` klasörlerini `%USERPROFILE%\.claude\skills\` içine kopyalaman yeterli.
+
+Yatırım tavsiyesi değildir. Gerçek parayla kullanmadan önce bir süre kâğıt üzerinde dene.
+
+------------------------------------------------------------
+
+KULLANICI:
+Değişiklikler D:\finaisikil\day-trader-skill altında, bist dalında; henüz commit etmedim. Kullanmaya başlamak için trader-* klasörlerini %USERPROFILE%\.claude\skills\ içine kopyalaman yeterli
+
+diyorsun madem yeterli yap aselsanı analiz edelim senle
+
+------------------------------------------------------------
+
+CLAUDE:
+Klasör boş, üzerine yazılacak bir şey yok. Kopyalıyorum ve ASELS verilerini çekiyorum:
+
+------------------------------------------------------------
+
+CLAUDE:
+Ağam, skill'leri kurdum, bu oturumda da göründüler, yani artık `/trader-scanner`, `/trader-analyst` gibi komutlarla çalışıyorlar. ASELS verisini yeni kurulan araçlarla canlı çektim. Çıktılar `D:\finaisikil\aselsan\trader\` altında. Saat 08:56, seans açılmadı, yani fiyatlar cuma (6 Kasım) kapanışı.
+
+## Fiyat ve günlük limitler
+- **Son fiyat:** 331,75 TL (cuma +%0,84).
+- **Bugünkü limitler:** taban **296,25**, tavan **361,75**.
+- **Günlük oynaklık yüksek:** ATR 17,7 TL, fiyatın yaklaşık %5,3'ü. Gün içi işlemde stop mesafesi geniş tutulmak zorunda, bu da alınabilecek lot sayısını düşürür.
+
+## Teknik görünüm: kısa vadede zayıf
+- **Fiyat bütün ortalamaların altında:**
+  - 20 günlük ortalamanın (342,5) %3 altında.
+  - 50 günlük ortalamanın (362,2) %8 altında.
+  - 200 günlük ortalamanın (361,5) %8 altında.
+- **50 günlük ortalama düşüyor:** 20 gün önce 376'daydı, şimdi 362. 200 günlüğün üstünden aşağı kesmek üzere; bu kesişme genelde zayıflık işareti sayılır.
+- **RSI 43:** nötr, aşırı satım bölgesinde değil. Günlük taramada da hiçbir kurulum çıkmadı.
+- **52 haftalık aralık:** zirve 450'nin %26 altında, dip 171,5'in %93 üstünde.
+- **Endekse göre:** son bir haftada ASELS −%4,4, XU100 +%6,7, yani endeksin gerisinde kaldı. Daha uzun vadede durum farklı:
+
+| Dönem | ASELS | XU100 |
+|---|---|---|
+| 3 ay | −%6,9 | −%16,9 |
+| 1 yıl | +%70,9 | +%5,2 |
+
+- **5 Kasım'daki düşüş:** fiyat 353,75'ten 329'a indi (−%7). Haberlere göre o gün BofA üzerinden yüklü satış olmuş.
+
+## Bilanço: büyüme güçlü (rakamlar milyon TL)
+
+| Çeyrek | Ciro | Yıllık | Brüt marj | Faaliyet marjı | Net kâr | Yıllık |
+|---|---|---|---|---|---|---|
+| 2026 3. çeyrek | 62.992 | +%34 | %30,8 | %26,6 | 12.031 | +%81 |
+| 2026 2. çeyrek | 54.188 | +%32 | %32,4 | %25,8 | 8.900 | +%62 |
+| 2026 1. çeyrek | 34.306 | +%15 | %30,7 | %24,9 | 5.539 | +%86 |
+
+- **Son 4 çeyrek:** ciro 257,9 milyar TL, net kâr 48,6 milyar TL.
+- **Marjlar:** brüt marj %30–33 bandında sabit. Net marj bir yıl önce %14'tü, şimdi %19.
+- **Önemli not:** bu rakamlar enflasyon muhasebesiyle (TMS 29) ve nominal TL ile. Reel büyüme tablodakinden düşüktür. Çeyrekleri kümülatif rakamlardan ben ayrıştırdım, o yüzden yaklaşıktır. Resmî rakamlar KAP'ta.
+
+## Son bir haftanın haberleri (başlıklardan)
+- **3 Kasım:** "dev sözleşme" duyurusu.
+- **5–6 Kasım:** BofA ve HSBC üzerinden yüklü satış haberleri; düşüşün açıklaması büyük ihtimalle bu.
+- **6 Kasım:** 3. çeyrek bilanço yorumları.
+- **2 ve 8 Kasım:** kurumların hedef fiyat güncellemeleri.
+
+Bunlar basın başlıkları; içeriklerini açıp doğrulamadım. Sözleşmenin büyüklüğünü KAP'tan kontrol etmek gerek.
+
+## Özetle
+Şirket tarafı güçlü: ciro ve kâr hızlı büyüyor, marjlar iyileşiyor, ama bu büyüme nominal TL ile. Grafik tarafı kısa vadede zayıf: fiyat ortalamaların altında, büyük kurumlar satış yapmış, son haftada endeksin gerisinde kalmış. Uzun vadede yine de son bir yılda endeksi çok geride bırakmış. Gün içi işlem açısından oynaklık yüksek, bu yüzden pozisyon küçük kalır. Şu an kurallara uyan bir kurulum yok.
+
+Bu bir veri özeti; al ya da sat demiyorum. Lisanslı danışman değilim, yatırım tavsiyesi değildir.
+
+Seans 10:00'da açılıyor. İstersen 10:20'den sonra ASELS'in 10:00–10:15 açılış aralığını izleyebilirim. Kırılım olursa stop ve hedefi, lot sayısını ve risk kontrolünü kâğıt üzerinde çıkarırım.
+
+------------------------------------------------------------
+
+KULLANICI:
+ne diyosun alınır mı yatırım tavsiyesi değil biliyorum deniyoz
+
+------------------------------------------------------------
+
+CLAUDE:
+Ağam, "al" ya da "alma" diyemem. Lisanslı danışman değilim ve bu karar senin paranla ilgili. Ama sistemin kurallarına göre şu an ne dediğini ve neyin değişmesi gerektiğini söyleyebilirim.
+
+**Kurallara göre bugün:** Şu an giriş sinyali yok. Günlük taramada kurulum çıkmadı. Fiyat 20, 50 ve 200 günlük ortalamaların hepsinin altında, büyük kurumlar satıyor. Sistemin mantığı düşen bıçağı tutmak değil, onay beklemek.
+
+**Neyin değişmesi gerekir:**
+- **Gün içi:** 10:00–10:15 açılış aralığının üstünde 5 dakikalık bir mum kapanışı gelmesi. Gelirse stop, hedef ve lot sayısı otomatik çıkar.
+- **Birkaç günlük vade:** 20 günlük ortalamanın (~342,5) geri alınması. Taramada bu "reclaimed the 20-day average" kurulumu olarak çıkar.
+- **Dip arayan için:** RSI 43, henüz aşırı satım bölgesinde değil. "Oversold bounce" kurulumu için RSI'ın 30'un altına inip sonra yukarı dönmesi gerekir.
+
+**İki tarafın hikâyesi:**
+- **Olumlu:** kâr yılda %60–80 büyüyor, marjlar iyileşiyor, sözleşme haberleri geliyor, son bir yılda endeksi çok geride bırakmış.
+- **Olumsuz:** grafik bozuk, büyük kurumlar satış yapıyor, son haftada endeks yükselirken ASELS düştü. Büyüme enflasyonla şişkin; bu güzel rakamlar da büyük ölçüde fiyata girmiş olabilir.
+
+**Denemek istiyorsan önerim kâğıt üzerinde test:** Gerçek para koymadan sistemi bugün çalıştıralım:
+- 10:20'den sonra açılış aralığını kontrol ederim.
+- Kırılım olursa planı çıkarırım: giriş, stop, hedef ve 100.000 TL'lik sanal hesapta lot sayısı.
+- Zaman Makinesi'yle ihtimallere bakarız.
+- Gün sonunda hedef mi stop mu geldi, sonucu kaydederiz.
+
+Bunu 2–3 hafta, farklı hisselerle tekrarlarsan sistemin gerçekten işe yarayıp yaramadığını kendi gözünle görürsün. Para koyup koymamaya ondan sonra karar vermek çok daha sağlam olur.
+
+10:20'de ASELS'e bakmamı istersen "bak" demen yeterli.
+
+------------------------------------------------------------
+
+KULLANICI:
+bu konuşmayı son konuşmamız.txt diye kaydet 
+
+Değişiklikler D:\finaisikil\day-trader-skill altında, bist dalında; henüz commit etmedim. Kullanmaya başlamak için trader-* klasörlerini %USERPROFILE%\.claude\skills\ içine kopyalaman yeterli
+
+bu sözü gereksinim.md diye kaydet githubda proje aç kendini ekleme komit çek

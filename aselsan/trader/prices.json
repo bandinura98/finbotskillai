@@ -1,0 +1,16 @@
+{
+  "as_of": "2026-11-09T05:56:03Z",
+  "source": "yahoo",
+  "note": "Delayed quotes (Yahoo .IS, can be ~15 minutes behind) for alerts and sizing checks. Your broker app's price is the one that fills. detail.fetched is when each price was read.",
+  "prices": {
+    "ASELS": 331.75
+  },
+  "detail": {
+    "ASELS": {
+      "prev_close": 329.0,
+      "time": "2026-11-06T15:09:59Z",
+      "source": "yahoo",
+      "fetched": "2026-11-09T05:56:03Z"
+    }
+  }
+}
